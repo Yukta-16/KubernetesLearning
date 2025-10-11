@@ -1,0 +1,22 @@
+kind: ReplicaSet
+apiVersion: apps/v1
+metadata:
+  - name: nginx-ReplicaSet
+  - namespace: yuktaNamespace
+specs:
+  - replicas: 2
+    selector:
+      matchlabels:
+        app: nginx
+
+    template:
+      metadata:
+        name: yukta-rep-pod
+        labels:
+          app: nginx
+      specs:
+        containers:
+        - name: nginx
+          image: nginx:latest
+          ports:
+            - containerPort: 80
