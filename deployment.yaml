@@ -11,7 +11,7 @@ specs:
 
     template:
       metadata:
-        name: yukta-pod
+        name: yukta-dep-pod
         labels:
           app: nginx
       specs:
