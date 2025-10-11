@@ -1,0 +1,21 @@
+kind: DaemonSet
+apiVersion: app/v1
+metadata:
+  name: yukta-daemonsets
+  namespace: yuktanamespace
+specs:
+    selector:
+      matchlabels:
+        app: nginx
+
+    template:
+      metadata:
+        name: yukta-dmn-pod
+        labels:
+          app: nginx
+      specs:
+        containers:
+        - name: nginx
+          image: nginx:latest
+          ports:
+            - containerPort: 80
