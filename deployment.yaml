@@ -3,3 +3,20 @@ apiVersion: apps/v1
 metadata:
   - name: nginx-deployment
   - namespace: yuktaNamespace
+specs:
+  - replica: 2
+    selector:
+      matchlabels:
+        app: nginx
+
+    template:
+      metadata:
+        name: yukta-pod
+        labels:
+          app: nginx
+      specs:
+        containers:
+        - name: nginx
+          image: nginx:latest
+          ports:
+            - containerPort: 80
