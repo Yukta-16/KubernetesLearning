@@ -3,7 +3,7 @@ apiVersion: app/v1
 metadata:
   - name: YuktaStorage
     label:
-      app: Local
+      app: local-pv
 spec:
   capacity:
     storage: 1Gi
