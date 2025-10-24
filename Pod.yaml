@@ -2,7 +2,7 @@ kind: Pod
 apiVersion: v1
 metadata:
   name: yukta-first-pod
-  namespace: nginx
+  namespace: yuktaNamespace
   labels:
     app: nginx
 specs:
