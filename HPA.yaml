@@ -18,4 +18,4 @@ metrics:
       name: cpu
       target:
         type: Utilization
-        averageUtilization: 5
+        averageUtilization: 70   #If CPU > 70% → add pods; if < 70% → remove pods.
