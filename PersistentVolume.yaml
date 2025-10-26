@@ -2,12 +2,13 @@ kind: PersistentVolume
 apiVersion: app/v1
 metadata:
   - name: YuktaStorage
-    label:
+    namespace: yuktaNamespace
+    labels:
       app: local-pv
 spec:
   capacity:
     storage: 1Gi
-  acccessModes:
+  accessModes:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
   storageClassName: local-storage
