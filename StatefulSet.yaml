@@ -18,6 +18,11 @@ spec:
        image: mysql:8.0
        ports:
        - containerPorts: 3306
+       livenessProbe:
+         hhtpGet:
+           path: /
+           port: 3306
+           
        resources:
             requests:
               cpu: 100m
