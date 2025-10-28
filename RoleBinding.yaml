@@ -5,11 +5,11 @@ metadata:
   namespace: apache
 
 subjects:
-  - kind: User
-    name: apache-user
-    apiGroup: rbac.authorization.k8s.io
-  roleRef:
-    kind: Role
-    name: apache-manager
-    apiGroup: rbac.authorization.k8s.io
+- kind: User
+  name: apache-user
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: Role
+  name: apache-manager
+  apiGroup: rbac.authorization.k8s.io
   
