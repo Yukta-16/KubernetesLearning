@@ -3,6 +3,9 @@ apiVersion: v1
 metadata: 
   name: sidecar-test
 spec:
+  volumes:
+  - name: shared-logs
+    emptyDir: {}
   containers:
   #produce logs
   - name: main-container
