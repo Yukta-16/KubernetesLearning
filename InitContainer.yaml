@@ -10,4 +10,4 @@ spec:
   containers:
   - name: main-container
     image: busybox:latest
-    command: ["sh", "-c","Main Container started"]
+    command: ["sh", "-c","echo 'Main Container started'"]
